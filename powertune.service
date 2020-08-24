@@ -1,0 +1,10 @@
+[Unit]
+Description=Powertop Autotune Service
+
+[Service]
+Type=idle
+Environment="TERM=dumb"
+ExecStart=/usr/bin/powertune
+
+[Install]
+WantedBy=multi-user.target

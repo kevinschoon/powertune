@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+powertop --auto-tune
+
+# Turn this back on as otherwise it causes an irritating
+# delay when moving the mouse after a short period of inactivity.
+# BUG: This assumes my mouse is plugged into my top-left USB port!
+echo 'on' > '/sys/bus/usb/devices/1-2/power/control';
